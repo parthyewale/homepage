@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg</title>
+    <link rel="stylesheet" href="b.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="main_box">
+        <div class="img"></div>
+        <div class="mouse"></div>
+    </div>
+    <script>
+        // Select the container box and the mouse placeholder
+        let main = document.querySelector('.main_box');
+        let mouse = document.querySelector('.mouse');
+
+        // Add an event listener for detecting
+        // the movement of the mouse
+        main.addEventListener('mousemove',
+            (e) => {
+
+                // Use a circle with a clipPath
+                // and the offsetX and offsetY property
+                mouse.style.clipPath =
+                    `circle(15em at ${e.offsetX}px ${e.offsetY}px)`;
+            });
+
+    </script>
+</body>
+
+</html>
